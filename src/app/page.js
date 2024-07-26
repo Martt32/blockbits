@@ -13,7 +13,7 @@ export default function Home() {
   }  
 }
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-20">
+    <main className="flex min-h-screen text-white flex-col items-center justify-between p-20">
       {/* <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
@@ -22,38 +22,37 @@ export default function Home() {
       </div> */}
       <div className="popup" id="popup-1">
         <div className='overlay'>
-            <div className='bg-black fixed left-0 top-0 flex flex-col w-1/2 justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"'>
-              {/* <p className='font-bold text-white p-2 text-2xl'>
+        <div className="fixed left-0 top-0 flex flex-col font-bold w-full justify-center border-b border-gray-300   pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+              <p className='font-bold text-white p-2 text-2xl'>
                 Accept Terms and Conditions
               </p>
-                <p className='text-grandson p-2 text-sm'>
-                  To proceed, please accept our <span className='text-green'>Terms and Conditions</span>
+                <p className='text-grandson font-bold p-2 text-sm'>
+                  To proceed, please accept our <span className='text-green font-bold'>Terms and Conditions</span>
               </p>
-              <label className='bg-transparent space-x-2 text-grandson text-sm px-2 flex'>
+              <label className='bg-transparent font-bold space-x-2 text-grandson text-sm px-2 flex'>
                 <input className='bg-green' type='checkbox' true/>
-                <p>
+                <p className='font-bold'>
                 I've read and accept the terms and conditions
                 </p>
               </label>
-              <div className='p-2'>
+              <div className='p-2 font-bold'>
                 <button className="text-sm p-2 bg-green rounded-lg w-auto" onClick={popUp}>Accept</button>
-              </div>   */}
+              </div>  
 
-              <p className='font-bold text-2xl'>Acquire membership Card</p>
+              {/* <p className='font-bold text-2xl'>Acquire membership Card</p>
               <p style={{ width:'30vw' }} className='text-sm text-grandson p-4 '>when purchasing a membership card please ensure you use the same wallet you use with the bot. We will authenticate your NFT ownership upon login, so be sure to disconnect and log in again after buying the NFT. This card entitiles you to 0% fees on the Bot</p>
               <div style={{ height:'40vh' }} className='bg-black m-4 fixed left-0 top-0 flex flex-col w-1/2 justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"'>
 
               </div>
-              <button className="text-sm p-2 bg-purple-500 rounded-lg w-auto" onClick={popUp}>Buy at magic Eden</button>
+              <button className="text-sm p-2 bg-purple-500 rounded-lg w-auto" onClick={popUp}>Buy at magic Eden</button> */}
             </div>
         </div>
       </div>
-      <div style={{ position:'fixed', top:'0%' }} className="flex justify-between p-2 w-full">
+      <div style={{ position:'absolute', top:'0%' }} className="flex bg-black justify-between p-1 w-full">
 
-      <div className="bg-black p-4 flex items-center">
-        <div className='flex mx-4'>
-          <p className='font-bold text-2xl'>BlockBit</p>    
-          <Image src='/solana.png' alt='' width={40} height={40} priority/>
+      <div className=" p-2 flex items-center">
+        <div className='flex mx-2'>    
+          <Image src='/Logo.png' alt='' width={150} height={150} priority/>
         </div>
         <Link href='/'>
         <p className="p-2 cursor-pointer hover:text-grandson">Pending pool</p>
@@ -78,22 +77,22 @@ export default function Home() {
         </div>
         <div style={{ border:'2px gray solid' }} className="flex space-x-2 h-1/2 justify-center items-center m-2 p-1 px-2 rounded-lg">
           <p >786.9</p>
-          <Image src='/solana.png' alt='' width={40} height={40} priority/>
+          <Image src='/SOL.png' alt='' width={25} height={25} priority/>
         </div>
         <div style={{ border:'2px gray solid' }} className="flex h-1/2 justify-center items-center p-2 m-2 bg-gray rounded-full" >
           <p >64ec2c...c898</p>
         </div>
-        <Image src='/solana.png' alt='' width={60} height={60} priority/>
+        <Image src='/SOL.png' alt='' width={40} height={40} priority/>
       </div>
       </div>
 
-      <div className="relative flex flex-col  before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+      <div className="relative flex flex-col  before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full  before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3  after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] ">
         <div className='flex justify-between '>
         <div className="py-4">
           <p className="font-bold text-white">Pending pool</p>
           <p className="text-sm text-grandson font-bold">Presenting your current pending pool, updated in real-time</p>
         </div>
-        <div className='bg-black fixed left-0 top-0 flex w-full justify-center items-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"'>
+        <div className='bg-black fixed left-0 top-0 flex w-full justify-center items-center border-b border-gray-300 from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"'>
         <Image src='/tick.png' alt='' width={60} height={60} priority/>
           <div>
               <p className='p-1 font-bold text-sm'>
@@ -105,7 +104,7 @@ export default function Home() {
             </div>    
         </div>
 
-        <div className='bg-black fixed left-0 top-0 flex w-full justify-center items-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"'>
+        <div className='bg-black fixed left-0 top-0 flex w-full justify-center items-center border-b border-gray-300 from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"'>
         <Image src='/cancel.png' alt='' width={60} height={60} priority/>
           <div>
               <p className='p-1 font-bold text-sm'>
@@ -164,7 +163,7 @@ export default function Home() {
                 <td  className='p-2'>
                   <div className='flex space-x-2'>
 
-                  <Image src='/solana.png' alt='' width={25} height={25} priority/>
+                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
                   <p>Wif</p>
                   </div>
                 </td>
@@ -184,7 +183,7 @@ export default function Home() {
                 </td>
                 <td>
                 <div className='flex items-center'>
-                  <Image src='/solana.png' alt='' width={40} height={40} priority/>
+                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
                   <p>5</p> 
                 </div>
                 </td>
@@ -214,7 +213,7 @@ export default function Home() {
                 <td  className='p-2'>
                   <div className='flex space-x-2'>
 
-                  <Image src='/solana.png' alt='' width={25} height={25} priority/>
+                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
                   <p>WINSTON</p>
                   </div>
                 </td>
@@ -234,7 +233,7 @@ export default function Home() {
                 </td>
                 <td>
                 <div className='flex items-center'>
-                  <Image src='/solana.png' alt='' width={40} height={40} priority/>
+                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
                   <p>50</p> 
                 </div>
                 </td>
@@ -264,7 +263,7 @@ export default function Home() {
                 <td  className='p-2'>
                   <div className='flex space-x-2'>
 
-                  <Image src='/solana.png' alt='' width={25} height={25} priority/>
+                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
                   <p>DADDY</p>
                   </div>
                 </td>
@@ -284,7 +283,7 @@ export default function Home() {
                 </td>
                 <td>
                 <div className='flex items-center'>
-                  <Image src='/solana.png' alt='' width={40} height={40} priority/>
+                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
                   <p>6</p> 
                 </div>
                 </td>
@@ -314,7 +313,7 @@ export default function Home() {
                 <td  className='p-2'>
                   <div className='flex space-x-2'>
 
-                  <Image src='/solana.png' alt='' width={25} height={25} priority/>
+                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
                   <p>wif</p>
                   </div>
                 </td>
@@ -334,7 +333,7 @@ export default function Home() {
                 </td>
                 <td>
                 <div className='flex items-center'>
-                  <Image src='/solana.png' alt='' width={40} height={40} priority/>
+                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
                   <p>5</p> 
                 </div>
                 </td>
@@ -364,7 +363,7 @@ export default function Home() {
                 <td  className='p-2'>
                   <div className='flex space-x-2'>
 
-                  <Image src='/solana.png' alt='' width={25} height={25} priority/>
+                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
                   <p>WINSTON</p>
                   </div>
                 </td>
@@ -384,7 +383,7 @@ export default function Home() {
                 </td>
                 <td>
                 <div className='flex items-center'>
-                  <Image src='/solana.png' alt='' width={40} height={40} priority/>
+                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
                   <p>50</p> 
                 </div>
                 </td>
@@ -414,7 +413,7 @@ export default function Home() {
                 <td  className='p-2'>
                   <div className='flex space-x-2'>
 
-                  <Image src='/solana.png' alt='' width={25} height={25} priority/>
+                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
                   <p>DADDY</p>
                   </div>
                 </td>
@@ -434,7 +433,7 @@ export default function Home() {
                 </td>
                 <td>
                 <div className='flex items-center'>
-                  <Image src='/solana.png' alt='' width={40} height={40} priority/>
+                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
                   <p>6</p> 
                 </div>
                 </td>

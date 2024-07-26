@@ -64,7 +64,7 @@ export default function Home() {
   ]
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-20">
+    <main className="flex min-h-screen text-white flex-col items-center justify-between p-20">
       {/* <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
@@ -72,49 +72,48 @@ export default function Home() {
         </p>
       </div> */}
       
-      <div style={{ position:'fixed', top:'0%' }} className="flex justify-between p-2 w-full">
+      <div style={{ position:'absolute', top:'0%' }} className="flex bg-black justify-between p-1 w-full">
 
-      <div className="bg-black p-4 flex items-center">
-        <div className='flex mx-4'>
-          <p className='font-bold text-2xl'>BlockBit</p>    
-          <Image src='/solana.png' alt='' width={40} height={40} priority/>
-        </div>
-        <Link href='/'>
-        <p className="p-2 cursor-pointer text-grandson hover:text-white">Pending pool</p>
-        </Link>
-        <Link href='/open_positions'>
-        <p className="p-2 cursor-pointer hover:text-grandson">Open positions</p>
-        </Link>
-        <Link href='/closed_positions'>
-        <p className="p-2 cursor-pointer text-grandson hover:text-white">Closed positions</p>
-        </Link>
-        <Link href='/settings'>
-        <p className="p-2 cursor-pointer text-grandson hover:text-white">Settings</p>
-        </Link>
-      </div>
+<div className=" p-2 flex items-center">
+  <div className='flex mx-2'>    
+    <Image src='/Logo.png' alt='' width={150} height={150} priority/>
+  </div>
+  <Link href='/'>
+  <p className="p-2 cursor-pointer font-bold text-grandson hover:text-white">Pending pool</p>
+  </Link>
+  <Link href='/open_positions'>
+  <p className="p-2 cursor-pointer font-bold hover:text-grandson">Open positions</p>
+  </Link>
+  <Link href='/closed_positions'>
+  <p className="p-2 cursor-pointer font-bold text-grandson hover:text-white">Closed positions</p>
+  </Link>
+  <Link href='/settings'>
+  <p className="p-2 cursor-pointer font-bold text-grandson hover:text-white">Settings</p>
+  </Link>
+</div>
 
-      <div className="flex justify-center items-center">
-        <div style={{ background: 'linear-gradient(85deg, #0039a6, #17b169)'}} className="cursor-pointer flex space-x-6 items-center w-auto h-1/2 p-2 rounded-lg">
-        <div>
-          <p className="text-sm">Purchase premium</p>
-        </div>  
-        <Image src='/crown.png' alt='' width={25} height={25} priority/>
-        </div>
-        <div style={{ border:'2px gray solid' }} className="flex space-x-2 h-1/2 justify-center items-center m-2 p-1 px-2 rounded-lg">
-          <p >786.9</p>
-          <Image src='/solana.png' alt='' width={40} height={40} priority/>
-        </div>
-        <div style={{ border:'2px gray solid' }} className="flex h-1/2 justify-center items-center p-2 m-2 bg-gray rounded-full" >
-          <p >64ec2c...c898</p>
-        </div>
-        <Image src='/solana.png' alt='' width={60} height={60} priority/>
-      </div>
-      </div>
+<div className="flex justify-center items-center">
+  <div style={{ background: 'linear-gradient(85deg, #0039a6, #17b169)'}} className="cursor-pointer flex space-x-6 items-center w-auto h-1/2 p-2 rounded-lg">
+  <div>
+    <p className="text-sm font-bold" >Purchase premium</p>
+  </div>  
+  <Image src='/crown.png' alt='' width={25} height={25} priority/>
+  </div>
+  <div style={{ border:'2px gray solid' }} className="flex space-x-2 h-1/2 justify-center items-center m-2 p-1 px-2 rounded-lg">
+    <p className='font-bold'>786.9</p>
+    <Image src='/SOL.png' alt='' width={25} height={25} priority/>
+  </div>
+  <div style={{ border:'2px gray solid' }} className="flex h-1/2 justify-center items-center p-2 m-2 bg-gray rounded-full" >
+    <p className='font-bold'>64ec2c...c898</p>
+  </div>
+  <Image style={{ borderRadius:'50%' }} src='/SOL.png' alt='' width={40} height={40} priority/>
+</div>
+</div>
 
-      <div className="relative flex flex-col  before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+      <div className="relative flex flex-col  before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full  z-[-1]">
         <div className="py-4">
           <p className="font-bold text-white">Open positions</p>
-          <p className="text-sm text-grandson font-bold">Presenting your current pending pool, updated in real-time</p>
+          <p className="text-sm text-grandson font-bold">Presenting your current open position, updated in real-time</p>
         </div>
         <div className="p-2 flex justify-between">
 
