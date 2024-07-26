@@ -121,14 +121,14 @@ export default function Home() {
           <option value='filter '>filter</option>
           
         </select>
-        <label for='show-hidden' className="bg-transparent">
+        <label for='show-hidden' className="bg-transparent font-bold">
           Show hidden
         <input className="bg-transparent" id='show-hidden' type='checkbox' />
         </label >
 
-        <p>Open position: 17</p>
-        <p>Total invested SOL: 14</p>
-        <p>Total current SOL: 17</p>
+        <p className='font-bold'>Open position: 17</p>
+        <p className='font-bold'>Total invested SOL: 14</p>
+        <p className='font-bold'>Total current SOL: 17</p>
         </div>
         <div>
           {
@@ -136,25 +136,25 @@ export default function Home() {
           }
           <table className="bg-black p-4">
             <thead className='text-grandson text-sm'>
-              <th style={{ width:'10vw' }} className='p-4 text-sm text-start py-4'>
+              <th style={{ width:'10vw' }} className='p-4 text-sm font-bold text-start py-4'>
                 pair
               </th>
-              <th style={{ width:'10vw' }} className='text-start py-4'>
+              <th style={{ width:'10vw' }} className='text-start font-bold py-4'>
                 created
               </th>
-              <th style={{ width:'20vw' }} className='w-auto text-start text-sm py-4'>
+              <th style={{ width:'20vw' }} className='w-auto font-bold text-start text-sm py-4'>
                 invested
               </th>
-              <th style={{ width:'10vw' }} className='text-start py-4'>
+              <th style={{ width:'10vw' }} className='text-start font-bold py-4'>
                 current
               </th>
-              <th style={{ width:'10vw' }} className='text-start py-4'>
+              <th style={{ width:'10vw' }} className='text-start font-bold py-4'>
                 ROI
               </th>
-              <th style={{ width:'10vw' }} className='text-start py-4'>
+              <th style={{ width:'10vw' }} className='text-start font-bold py-4'>
                 PNL
               </th>
-              <th style={{ width:'10vw' }} className='text-start py-4'>
+              <th style={{ width:'10vw' }} className='text-start font-bold py-4'>
                 status
               </th>
             </thead>
@@ -165,22 +165,22 @@ export default function Home() {
                   <div className='flex space-x-2'>
 
                   <Image src='/solana.png' alt='' width={25} height={25} priority/>
-                  <p>{position.pair}</p>
+                  <p className='font-bold'>{position.pair}</p>
                   </div>
                 </td>
                 <td>
-                  <p>{position.created}</p>
+                  <p className='font-bold'>{position.created}</p>
                 </td>
                 <td className='flex items-center space-x-2 py-6'>
                 <div className='flex items-center'>
                   <Image src='/solana.png' alt='' width={40} height={40} priority/>
-                  <p>{position.invested}</p> 
+                  <p className='font-bold'>{position.invested}</p> 
                 </div>
                 </td>
                 <td>
                 <div className='flex items-center'>
                   <Image src='/solana.png' alt='' width={40} height={40} priority/>
-                  <p>{position.current}</p> 
+                  <p className='font-bold'>{position.current}</p> 
                 </div>
                 </td>
                 <td className={`${position.ROI === 12 ? 'text-red' : 'text-green'}`}>
@@ -189,14 +189,14 @@ export default function Home() {
                 <td>
                 <div className={`flex items-center ${position.PNL === 'SP Selling' ? 'text-red' : 'text-green'}`}>
                   <Image src='/solana.png' alt='' width={40} height={40} priority/>
-                  <p>{position.PNL}</p> 
+                  <p className='font-bold'>{position.PNL}</p> 
                 </div>
                 </td>
                 <td className={`${position.status === 'SP Selling' ? 'text-red' : 'text-green'  } ${position.status === 'waiting' && 'text-yellow'}`}>
-                  <p className="">{position.status}</p>
+                  <p className="font-bold">{position.status}</p>
                 </td>
                 <td>
-                  <p style={{ width:'8vw' }} className=" m-1flex text-sm rounded-lg bg-gray p-2  m-1">Quick sell</p>
+                  <button style={{ width:'8vw' }} className="m-1 flex text-sm rounded-lg bg-gray p-2  m-1 font-bold">Quick sell</button>
                 </td>
               </tr>))}
             </tbody>

@@ -4,6 +4,63 @@ import Link from 'next/link'
 
 export default function Home() {
 
+  const  positions = [
+    { pair:'Wif',
+      created:'16 days',
+      contract_audit: 'fad',
+      pooled_sol:5,
+      pooled_token:10,
+      h_change:-20,
+      LP_burned:'not burned',
+      status:'waiting'
+    },{
+      pair:'Winston',
+      created:'21 h',
+      contract_audit: 'fad',
+      pooled_sol:50,
+      pooled_token:20,
+      h_change:-30,
+      LP_burned:'burned',
+      status:'Buying'
+    },{
+      pair:'Daddy',
+      created:'3 mins',
+      contract_audit: 'fad',
+      pooled_sol:20,
+      pooled_token:10,
+      h_change:-40,
+      LP_burned:'not burned',
+      status:'waiting'
+    },{
+      pair:'Wif',
+      created:'16 days',
+      contract_audit: 'fad',
+      pooled_sol:5,
+      pooled_token:10,
+      h_change:-20,
+      LP_burned:'not burned',
+      status:'waiting'
+    },{
+      pair:'Winston',
+      created:'21 h',
+      contract_audit: 'fad',
+      pooled_sol:50,
+      pooled_token:20,
+      h_change:-30,
+      LP_burned:'burned',
+      status:'Buying'
+    },{
+      pair:'Daddy',
+      created:'3 mins',
+      contract_audit: 'fad',
+      pooled_sol:20,
+      pooled_token:10,
+      h_change:-40,
+      LP_burned:'not burned',
+      status:'waiting'
+    },
+  ]
+
   const popUp = async ()=>{
     try{
     const popup = document.querySelector('.popup')
@@ -22,12 +79,12 @@ export default function Home() {
       </div> */}
       <div className="popup" id="popup-1">
         <div className='overlay'>
-        <div className="fixed left-0 top-0 flex flex-col font-bold w-full justify-center border-b border-gray-300   pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+        <div className="fixed left-0 top-0 flex flex-col font-bold w-full justify-center border-b border-gray-300 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
               <p className='font-bold text-white p-2 text-2xl'>
                 Accept Terms and Conditions
               </p>
                 <p className='text-grandson font-bold p-2 text-sm'>
-                  To proceed, please accept our <span className='text-green font-bold'>Terms and Conditions</span>
+                  To proceed, please accept our <span className='text-teal-600 font-bold'>Terms and Conditions</span>
               </p>
               <label className='bg-transparent font-bold space-x-2 text-grandson text-sm px-2 flex'>
                 <input className='bg-green' type='checkbox' true/>
@@ -36,7 +93,7 @@ export default function Home() {
                 </p>
               </label>
               <div className='p-2 font-bold'>
-                <button className="text-sm p-2 bg-green rounded-lg w-auto" onClick={popUp}>Accept</button>
+                <button className="text-sm p-2 bg-teal-500 rounded-lg w-auto" onClick={popUp}>Accept</button>
               </div>  
 
               {/* <p className='font-bold text-2xl'>Acquire membership Card</p>
@@ -55,32 +112,32 @@ export default function Home() {
           <Image src='/Logo.png' alt='' width={150} height={150} priority/>
         </div>
         <Link href='/'>
-        <p className="p-2 cursor-pointer hover:text-grandson">Pending pool</p>
+        <p className=" font-bold p-2 cursor-pointer hover:text-grandson">Pending pool</p>
         </Link>
         <Link href='/open_positions'>
-        <p className="p-2 cursor-pointer text-grandson hover:text-white">Open positions</p>
+        <p className= "font-bold p-2 cursor-pointer text-grandson hover:text-white">Open positions</p>
         </Link>
         <Link href='/closed_positions'>
-        <p className="p-2 cursor-pointer text-grandson hover:text-white">Closed positions</p>
+        <p className=" font-bold p-2 cursor-pointer text-grandson hover:text-white">Closed positions</p>
         </Link>
         <Link href='/settings'>
-        <p className="p-2 cursor-pointer text-grandson hover:text-white">Settings</p>
+        <p className=" font-bold p-2 cursor-pointer text-grandson hover:text-white">Settings</p>
         </Link>
       </div>
 
       <div className="flex justify-center items-center">
         <div style={{ background: 'linear-gradient(85deg, #0039a6, #17b169)'}} className="cursor-pointer flex space-x-6 items-center w-auto h-1/2 p-2 rounded-lg">
         <div>
-          <p className="text-sm" onClick={popUp}>Purchase premium</p>
+          <p className="text-sm font-bold " onClick={popUp}>Purchase premium</p>
         </div>  
         <Image src='/crown.png' alt='' width={25} height={25} priority/>
         </div>
-        <div style={{ border:'2px gray solid' }} className="flex space-x-2 h-1/2 justify-center items-center m-2 p-1 px-2 rounded-lg">
-          <p >786.9</p>
+        <div style={{ border:'2px gray solid' }} className="flex font-bold  space-x-2 h-1/2 justify-center items-center m-2 p-1 px-2 rounded-lg">
+          <p className='font-bold '>786.9</p>
           <Image src='/SOL.png' alt='' width={25} height={25} priority/>
         </div>
-        <div style={{ border:'2px gray solid' }} className="flex h-1/2 justify-center items-center p-2 m-2 bg-gray rounded-full" >
-          <p >64ec2c...c898</p>
+        <div style={{ border:'2px gray solid' }} className="flex h-1/2 font-bold  justify-center items-center p-2 m-2 bg-gray rounded-full" >
+          <p className='font-bold '>64ec2c...c898</p>
         </div>
         <Image src='/SOL.png' alt='' width={40} height={40} priority/>
       </div>
@@ -92,25 +149,25 @@ export default function Home() {
           <p className="font-bold text-white">Pending pool</p>
           <p className="text-sm text-grandson font-bold">Presenting your current pending pool, updated in real-time</p>
         </div>
-        <div className='bg-black fixed left-0 top-0 flex w-full justify-center items-center border-b border-gray-300 from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"'>
+        <div style={{ border:'gray 2px solid' }}  className='bg-black-500 fixed left-0 top-0 flex w-full justify-center items-center border-b border-gray-300 from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"'>
         <Image src='/tick.png' alt='' width={60} height={60} priority/>
           <div>
               <p className='p-1 font-bold text-sm'>
                   Transaction successful
               </p>
-              <p className='text-sm'>
+              <p className='text-sm font-bold'>
                   Bought 1,000,000 for 6.5
               </p>
             </div>    
         </div>
 
-        <div className='bg-black fixed left-0 top-0 flex w-full justify-center items-center border-b border-gray-300 from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"'>
+        <div  style={{ border:'gray 2px solid' }} className="bg-black-500 fixed left-0 top-0 flex w-full justify-center items-center border-b border-gray-300 from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
         <Image src='/cancel.png' alt='' width={60} height={60} priority/>
           <div>
               <p className='p-1 font-bold text-sm'>
                   Transaction failed
               </p>
-              <p className='text-sm'>
+              <p className='text-sm font-bold'>
                   Bought 1,000,000 for 6.5
               </p>
             </div>    
@@ -123,7 +180,11 @@ export default function Home() {
         <div className="p-2">
 
         <select style={{ border:'2px gray solid' }} className="bg-transparent w-auto rounded-full p-1 cursor-pointer">
-          <option value='filter '>filter</option>
+          <option value='filter ' >
+            <p className='font-bold'>
+              filter
+            </p>
+            </option>
           
         </select>
         </div>
@@ -133,334 +194,84 @@ export default function Home() {
           }
           <table className="bg-black p-4">
             <thead className='text-grandson text-sm'>
-              <th style={{ width:'10vw' }} className='p-4 text-sm text-start py-4'>
+              <th style={{ width:'10vw' }} className='font-bold p-4 text-sm text-start py-4'>
                 pair
               </th>
-              <th style={{ width:'10vw' }} className='text-start py-4'>
+              <th style={{ width:'10vw' }} className='font-bold text-start py-4'>
                 created
               </th>
-              <th style={{ width:'20vw' }} className='w-auto text-start text-sm py-4'>
+              <th style={{ width:'20vw' }} className='font-bold w-auto text-start text-sm py-4'>
                 contract audit
               </th>
-              <th style={{ width:'10vw' }} className='text-start py-4'>
+              <th style={{ width:'10vw' }} className='font-bold text-start py-4'>
                 pooled sol
               </th>
-              <th style={{ width:'10vw' }} className='text-start py-4'>
+              <th style={{ width:'10vw' }} className='font-bold text-start py-4'>
                 pooled token
               </th>
-              <th style={{ width:'10vw' }} className='text-start py-4'>
+              <th style={{ width:'10vw' }} className='font-bold text-start py-4'>
                 24H change(%)
               </th>
-              <th style={{ width:'10vw' }} className='text-start py-4'>
+              <th style={{ width:'10vw' }} className='font-bold text-start py-4'>
                 LP burned
               </th>
-              <th style={{ width:'10vw' }} className='text-start py-4'>
+              <th style={{ width:'10vw' }} className='font-bold text-start py-4'>
                 status
               </th>
             </thead>
             <tbody className="p-4">
-              <tr className="odd:bg-gray even:bg-black text-sm p-2" style={{ height:'10vh' }}>
+              { positions.map((position, index) => (
+                <tr key={index} className="odd:bg-gray even:bg-black text-sm p-2" style={{ height:'10vh' }}>
                 <td  className='p-2'>
-                  <div className='flex space-x-2'>
+                  <div className='flex items-center space-x-2'>
 
                   <Image src='/SOL.png' alt='' width={25} height={25} priority/>
-                  <p>Wif</p>
+                  <p className='font-bold'>{position.pair}</p>
                   </div>
                 </td>
                 <td>
-                  <p>16 days</p>
+                  <p className='font-bold'>{position.created}</p>
                 </td>
                 <td className='flex items-center space-x-2 py-6'>
-                  <div className='flex items-center'>
-                  <p>Fad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
+                  <div className='flex items-center space-x-1'>
+                  <p className='font-bold'>Fad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
                   </div>
-                  <div className='flex items-center'>
-                  <p>Mad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
+                  <div className='flex items-center space-x-1'>
+                  <p className='font-bold'>Mad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
                   </div>
-                  <div className='flex items-center'>
-                  <p>top 10 holders</p><Image src='/tick.png' alt='' width={12} height={12} priority/>
+                  <div className='flex items-center space-x-1'>
+                  <p className='font-bold'>top 10 holders</p><Image src='/tick.png' alt='' width={12} height={12} priority/>
                   </div>
                 </td>
                 <td>
-                <div className='flex items-center'>
-                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
-                  <p>5</p> 
+                <div className='flex space-x-2 items-center'>
+                  <Image src='/SOL.png' alt='' width={20} height={20} priority/>
+                  <p className='font-bold'>{position.pooled_sol}</p> 
                 </div>
                 </td>
                 <td>
-                  <p>10%</p>
+                  <p className='font-bold'>{position.pooled_token}%</p>
                 </td>
                 <td>
-                  <p className="text-red">-20%</p>
+                  <p className="text-red font-bold">{position.h_change}%</p>
                 </td>
                 <td>
                 <div className='flex items-center space-x-1'>
-                  <p>not burned</p> 
+                  <p className='font-bold'>{position.LP_burned}</p> 
                   <Image src='/cancel.png' alt='' width={12} height={12} priority/>
                   </div>
                 </td>
                 <td>
-                  <p className="text-yellow">waiting</p>
+                  <p className={`${position.status === 'waiting' ? 'text-yellow' : 'text-green'} font-bold`}>{position.status}</p>
                 </td>
                 <td>
-                  <button style={{ width:'8vw' }} className=" m-1flex text-sm rounded-lg bg-gray p-2  m-1" onclick={popUp}>Quick buy</button>
+                  <button style={{ width:'8vw' }} className="font-bold m-1flex text-sm rounded-lg bg-gray p-2  m-1" onclick={popUp}>Quick buy</button>
                 </td>
                 <td  className='p-2'>
-                  <p className="text-sm rounded-lg bg-gray p-2">Cancel</p>
+                  <p className="text-sm font-bold rounded-lg bg-gray p-2">Cancel</p>
                 </td>
               </tr>
-              <tr className="odd:bg-gray even:bg-black text-sm p-2" style={{ height:'10vh' }}>
-                <td  className='p-2'>
-                  <div className='flex space-x-2'>
-
-                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
-                  <p>WINSTON</p>
-                  </div>
-                </td>
-                <td>
-                  <p>21 h</p>
-                </td>
-                <td className='flex items-center space-x-2 py-6'>
-                  <div className='flex items-center'>
-                  <p>Fad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
-                  </div>
-                  <div className='flex items-center'>
-                  <p>Mad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
-                  </div>
-                  <div className='flex items-center'>
-                  <p>top 10 holders</p><Image src='/tick.png' alt='' width={12} height={12} priority/>
-                  </div>
-                </td>
-                <td>
-                <div className='flex items-center'>
-                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
-                  <p>50</p> 
-                </div>
-                </td>
-                <td>
-                  <p>24%</p>
-                </td>
-                <td>
-                  <p className="text-green">+30%</p>
-                </td>
-                <td>
-                <div className='flex items-center space-x-1'>
-                  <p>Burned</p> 
-                  <Image src='/tick.png' alt='' width={12} height={12} priority/>
-                  </div>
-                </td>
-                <td>
-                  <p className="text-green">Buying</p>
-                </td>
-                <td>
-                  <p style={{ width:'8vw' }} className=" m-1flex text-sm rounded-lg bg-gray p-2  m-1" onclick={popUp}>Quick buy</p>
-                </td>
-                <td  className='p-2'>
-                  <p className="text-sm rounded-lg bg-gray p-2">Cancel</p>
-                </td>
-              </tr>
-              <tr className="odd:bg-gray even:bg-black text-sm p-2" style={{ height:'10vh' }}>
-                <td  className='p-2'>
-                  <div className='flex space-x-2'>
-
-                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
-                  <p>DADDY</p>
-                  </div>
-                </td>
-                <td>
-                  <p>3 mins</p>
-                </td>
-                <td className='flex items-center space-x-2 py-6'>
-                  <div className='flex items-center'>
-                  <p>Fad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
-                  </div>
-                  <div className='flex items-center'>
-                  <p>Mad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
-                  </div>
-                  <div className='flex items-center'>
-                  <p>top 10 holders</p><Image src='/tick.png' alt='' width={12} height={12} priority/>
-                  </div>
-                </td>
-                <td>
-                <div className='flex items-center'>
-                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
-                  <p>6</p> 
-                </div>
-                </td>
-                <td>
-                  <p>20%</p>
-                </td>
-                <td>
-                  <p className="text-red">-40%</p>
-                </td>
-                <td>
-                <div className='flex items-center space-x-1'>
-                  <p>not burned</p> 
-                  <Image src='/cancel.png' alt='' width={12} height={12} priority/>
-                  </div>
-                </td>
-                <td>
-                  <p className="text-yellow">waiting</p>
-                </td>
-                <td>
-                  <p style={{ width:'8vw' }} className=" m-1flex text-sm rounded-lg bg-gray p-2  m-1" onclick={popUp}>Quick buy</p>
-                </td>
-                <td  className='p-2'>
-                  <p className="text-sm rounded-lg bg-gray p-2">Cancel</p>
-                </td>
-              </tr>
-              <tr className="odd:bg-gray even:bg-black text-sm p-2" style={{ height:'10vh' }}>
-                <td  className='p-2'>
-                  <div className='flex space-x-2'>
-
-                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
-                  <p>wif</p>
-                  </div>
-                </td>
-                <td>
-                  <p>16 days</p>
-                </td>
-                <td className='flex items-center space-x-2 py-6'>
-                  <div className='flex items-center'>
-                  <p>Fad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
-                  </div>
-                  <div className='flex items-center'>
-                  <p>Mad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
-                  </div>
-                  <div className='flex items-center'>
-                  <p>top 10 holders</p><Image src='/tick.png' alt='' width={12} height={12} priority/>
-                  </div>
-                </td>
-                <td>
-                <div className='flex items-center'>
-                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
-                  <p>5</p> 
-                </div>
-                </td>
-                <td>
-                  <p>10%</p>
-                </td>
-                <td>
-                  <p className="text-red">-20%</p>
-                </td>
-                <td>
-                <div className='flex items-center space-x-1'>
-                  <p>not burned</p> 
-                  <Image src='/cancel.png' alt='' width={12} height={12} priority/>
-                  </div>
-                </td>
-                <td>
-                  <p className="text-yellow">waiting</p>
-                </td>
-                <td>
-                  <p style={{ width:'8vw' }} className=" m-1flex text-sm rounded-lg bg-gray p-2  m-1" onclick={popUp}>Quick buy</p>
-                </td>
-                <td  className='p-2'>
-                  <p className="text-sm rounded-lg bg-gray p-2">Cancel</p>
-                </td>
-              </tr>
-              <tr className="odd:bg-gray even:bg-black text-sm p-2" style={{ height:'10vh' }}>
-                <td  className='p-2'>
-                  <div className='flex space-x-2'>
-
-                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
-                  <p>WINSTON</p>
-                  </div>
-                </td>
-                <td>
-                  <p>21 h</p>
-                </td>
-                <td className='flex items-center space-x-2 py-6'>
-                  <div className='flex items-center'>
-                  <p>Fad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
-                  </div>
-                  <div className='flex items-center'>
-                  <p>Mad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
-                  </div>
-                  <div className='flex items-center'>
-                  <p>top 10 holders</p><Image src='/tick.png' alt='' width={12} height={12} priority/>
-                  </div>
-                </td>
-                <td>
-                <div className='flex items-center'>
-                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
-                  <p>50</p> 
-                </div>
-                </td>
-                <td>
-                  <p>24%</p>
-                </td>
-                <td>
-                  <p className="text-green">+30%</p>
-                </td>
-                <td>
-                <div className='flex items-center space-x-1'>
-                  <p>Burned</p> 
-                  <Image src='/tick.png' alt='' width={12} height={12} priority/>
-                  </div>
-                </td>
-                <td>
-                  <p className="text-green">Buying</p>
-                </td>
-                <td>
-                  <p style={{ width:'8vw' }} className=" m-1flex text-sm rounded-lg bg-gray p-2  m-1" onclick={popUp}>Quick buy</p>
-                </td>
-                <td  className='p-2'>
-                  <p className="text-sm rounded-lg bg-gray p-2">Cancel</p>
-                </td>
-              </tr>
-              <tr className="odd:bg-gray even:bg-black text-sm p-2" style={{ height:'10vh' }}>
-                <td  className='p-2'>
-                  <div className='flex space-x-2'>
-
-                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
-                  <p>DADDY</p>
-                  </div>
-                </td>
-                <td>
-                  <p>3 mins</p>
-                </td>
-                <td className='flex items-center space-x-2 py-6'>
-                  <div className='flex items-center'>
-                  <p>Fad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
-                  </div>
-                  <div className='flex items-center'>
-                  <p>Mad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
-                  </div>
-                  <div className='flex items-center'>
-                  <p>top 10 holders</p><Image src='/tick.png' alt='' width={12} height={12} priority/>
-                  </div>
-                </td>
-                <td>
-                <div className='flex items-center'>
-                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
-                  <p>6</p> 
-                </div>
-                </td>
-                <td>
-                  <p>20%</p>
-                </td>
-                <td>
-                  <p className="text-red">-40%</p>
-                </td>
-                <td>
-                <div className='flex items-center space-x-1'>
-                  <p>not burned</p> 
-                  <Image src='/cancel.png' alt='' width={12} height={12} priority/>
-                  </div>
-                </td>
-                <td>
-                  <p className="text-yellow">waiting</p>
-                </td>
-                <td>
-                  <p style={{ width:'8vw' }} className=" m-1flex text-sm rounded-lg bg-gray p-2  m-1" onclick={popUp}>Quick buy</p>
-                </td>
-                <td  className='p-2'>
-                  <p className="text-sm rounded-lg bg-gray p-2">Cancel</p>
-                </td>
-              </tr>
-
-
+              ))}
             </tbody>
           </table>
         </div>

@@ -78,32 +78,32 @@ export default function Home() {
     <Image src='/Logo.png' alt='' width={150} height={150} priority/>
   </div>
   <Link href='/'>
-  <p className="p-2 cursor-pointer text-grandson hover:text-white">Pending pool</p>
+  <p className="p-2 cursor-pointer font-bold text-grandson hover:text-white">Pending pool</p>
   </Link>
   <Link href='/open_positions'>
-  <p className="p-2 cursor-pointer hover:text-white">Open positions</p>
+  <p className="p-2 cursor-pointer font-bold text-grandson hover:text-grandson">Open positions</p>
   </Link>
   <Link href='/closed_positions'>
-  <p className="p-2 cursor-pointer text-grandson hover:text-grandson">Closed positions</p>
+  <p className="p-2 cursor-pointer font-bold text-white hover:text-grandson">Closed positions</p>
   </Link>
   <Link href='/settings'>
-  <p className="p-2 cursor-pointer text-grandson hover:text-white">Settings</p>
+  <p className="p-2 cursor-pointer font-bold text-grandson hover:text-white">Settings</p>
   </Link>
 </div>
 
 <div className="flex justify-center items-center">
-  <div style={{ background: 'linear-gradient(85deg, #0039a6, #17b169)'}} className="cursor-pointer flex space-x-6 items-center w-auto h-1/2 p-2 rounded-lg">
+  <div style={{ background: 'linear-gradient(85deg, #0039a6, #17b169)'}} className="cursor-pointer font-bold flex space-x-6 items-center w-auto h-1/2 p-2 rounded-lg">
   <div>
-    <p className="text-sm" >Purchase premium</p>
+    <p className="text-sm font-bold" >Purchase premium</p>
   </div>  
   <Image src='/crown.png' alt='' width={25} height={25} priority/>
   </div>
-  <div style={{ border:'2px gray solid' }} className="flex space-x-2 h-1/2 justify-center items-center m-2 p-1 px-2 rounded-lg">
-    <p >786.9</p>
+  <div style={{ border:'2px gray solid' }} className="flex font-bold space-x-2 h-1/2 justify-center items-center m-2 p-1 px-2 rounded-lg">
+    <p className='font-bold'>786.9</p>
     <Image src='/SOL.png' alt='' width={25} height={25} priority/>
   </div>
-  <div style={{ border:'2px gray solid' }} className="flex h-1/2 justify-center items-center p-2 m-2 bg-gray rounded-full" >
-    <p >64ec2c...c898</p>
+  <div style={{ border:'2px gray solid' }} className="flex font-bold h-1/2 justify-center items-center p-2 m-2 bg-gray rounded-full" >
+    <p className='font-bold'>64ec2c...c898</p>
   </div>
   <Image style={{ borderRadius:'50%' }} src='/SOL.png' alt='' width={40} height={40} priority/>
 </div>
@@ -120,7 +120,7 @@ export default function Home() {
           <option value='filter '>filter</option>
           
         </select>
-        <p className='text-grandson'>Closed Positions PNL:177 SOL</p>
+        <p className='text-grandson font-bold'>Closed Positions PNL:177 SOL</p>
         </div>
         <div>
           {
@@ -131,19 +131,19 @@ export default function Home() {
               <th style={{ width:'10vw' }} className='p-4 text-sm text-start py-4'>
                 pair
               </th>
-              <th style={{ width:'10vw' }} className='text-start py-4'>
+              <th style={{ width:'10vw' }} className='text-start font-bold py-4'>
                 created
               </th>
-              <th style={{ width:'20vw' }} className='w-auto text-start text-sm py-4'>
+              <th style={{ width:'20vw' }} className='w-auto text-start font-bold text-sm py-4'>
                 invested
               </th>
-              <th style={{ width:'10vw' }} className='text-start py-4'>
+              <th style={{ width:'10vw' }} className='text-start font-bold py-4'>
                 sold
               </th>
-              <th style={{ width:'10vw' }} className='text-start py-4'>
+              <th style={{ width:'10vw' }} className='text-start font-bold py-4'>
                 ROI
               </th>
-              <th style={{ width:'10vw' }} className='text-start py-4'>
+              <th style={{ width:'10vw' }} className='text-start font-bold py-4'>
                 PNL
               </th>
             </thead>
@@ -154,22 +154,22 @@ export default function Home() {
                   <div className='flex space-x-2'>
 
                   <Image src='/SOL.png' alt='' width={25} height={25} priority/>
-                  <p>{position.pair}</p>
+                  <p className='font-bold'>{position.pair}</p>
                   </div>
                 </td>
                 <td>
-                  <p>{position.created}</p>
+                  <p className='font-bold'>{position.created}</p>
                 </td>
                 <td className='flex items-center space-x-2 py-6'>
                 <div className='flex items-center'>
                   <Image src='/SOL.png' alt='' width={20} height={20} priority/>
-                  <p>{position.invested}</p> 
+                  <p className='font-bold'>{position.invested}</p> 
                 </div>
                 </td>
                 <td>
-                <div className='flex items-center'>
+                <div className='flex font-bold items-center'>
                   <Image src='/SOL.png' alt='' width={20} height={20} priority/>
-                  <p>{position.current}</p> 
+                  <p className='font-bold'>{position.current}</p> 
                 </div>
                 </td>
                 <td className={`${position.ROI === 12 ? 'text-red' : 'text-green'}`}>
@@ -178,7 +178,7 @@ export default function Home() {
                 <td>
                 <div className={`flex items-center ${position.status === 'SP Selling' ? 'text-red' : 'text-green'}`}>
                   <Image src='/SOL.png' alt='' width={20} height={20} priority/>
-                  <p>{position.PNL}</p> 
+                  <p className='font-bold'>{position.PNL}</p> 
                 </div>
                 </td>
                 <td className='text-white p-4'>
