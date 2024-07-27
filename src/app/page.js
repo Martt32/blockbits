@@ -19,7 +19,7 @@ export default function Home() {
       contract_audit: 'fad',
       pooled_sol:50,
       pooled_token:20,
-      h_change:-30,
+      h_change:+30,
       LP_burned:'burned',
       status:'Buying'
     },{
@@ -46,7 +46,7 @@ export default function Home() {
       contract_audit: 'fad',
       pooled_sol:50,
       pooled_token:20,
-      h_change:-30,
+      h_change:+30,
       LP_burned:'burned',
       status:'Buying'
     },{
@@ -69,6 +69,24 @@ export default function Home() {
     alert(err)
   }  
 }
+const popUpToast = async ()=>{
+  try{
+  const popup = document.querySelector('.popuptoast')
+  popup.classList.toggle('active')
+}catch(err){
+  alert(err)
+}  
+}
+const popUpSuccess = async ()=>{
+  try{
+  const popUpOff = document.querySelector('.popuptoast')
+  popUpOff.classList.toggle('active')
+  const popup = document.querySelector('.popUpSuccess')
+  popup.classList.add('active')
+}catch(err){
+  alert(err)
+}  
+}
   return (
     <main className="flex min-h-screen text-white flex-col items-center justify-between p-20">
       {/* <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
@@ -77,10 +95,11 @@ export default function Home() {
           <code className="font-mono font-bold">src/app/page.js</code>
         </p>
       </div> */}
-      <div className="popup" id="popup-1">
-        <div className='overlay'>
+                <div className="popuptoast" id="popup-1">
+        <div className='overlaytoast'>
         <div className="fixed left-0 top-0 flex flex-col font-bold w-full justify-center border-b border-gray-300 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-              <p className='font-bold text-white p-2 text-2xl'>
+
+                <p className='font-bold text-white p-2 text-2xl'>
                 Accept Terms and Conditions
               </p>
                 <p className='text-grandson font-bold p-2 text-sm'>
@@ -93,15 +112,20 @@ export default function Home() {
                 </p>
               </label>
               <div className='p-2 font-bold'>
-                <button className="text-sm p-2 bg-teal-500 rounded-lg w-auto" onClick={popUp}>Accept</button>
-              </div>  
-
-              {/* <p className='font-bold text-2xl'>Acquire membership Card</p>
-              <p style={{ width:'30vw' }} className='text-sm text-grandson p-4 '>when purchasing a membership card please ensure you use the same wallet you use with the bot. We will authenticate your NFT ownership upon login, so be sure to disconnect and log in again after buying the NFT. This card entitiles you to 0% fees on the Bot</p>
-              <div style={{ height:'40vh' }} className='bg-black m-4 fixed left-0 top-0 flex flex-col w-1/2 justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"'>
-
+                <button className="text-sm p-2 bg-teal-500 rounded-lg w-auto" onClick={popUpSuccess}>Accept</button>
               </div>
-              <button className="text-sm p-2 bg-purple-500 rounded-lg w-auto" onClick={popUp}>Buy at magic Eden</button> */}
+              </div>
+              </div>
+              </div>
+      <div className="popup" id="popup-1">
+        <div className='overlay'>
+        <div className="fixed left-0 top-0 flex flex-col font-bold w-full justify-center border-b border-gray-300 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+      <p className='font-bold text-2xl'>Acquire membership Card</p>
+              <p style={{ width:'30vw' }} className='text-sm text-grandson font-bold p-4 '>when purchasing a membership card please ensure you use the same wallet you use with the bot. We will authenticate your NFT ownership upon login, so be sure to disconnect and log in again after buying the NFT. This card entitiles you to 0% fees on the Bot</p>
+              <div style={{ height:'40vh' }} className='bg-black m-4 fixed left-0 top-0 flex flex-col w-1/2 justify-center border-b border-gray-300  pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"'>
+              <Image src='/premium.png' alt='' width={350} height={350} priority/>
+        </div>
+              <button className="text-sm p-2 bg-purple-500 rounded-lg w-auto" onClick={popUp}>Buy at magic Eden</button>
             </div>
         </div>
       </div>
@@ -146,12 +170,13 @@ export default function Home() {
       <div className="relative flex flex-col  before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full  before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3  after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] ">
         <div className='flex justify-between '>
         <div className="py-4">
-          <p className="font-bold text-white">Pending pool</p>
+          <p className="font-bold text-white">PENDING POOL</p>
           <p className="text-sm text-grandson font-bold">Presenting your current pending pool, updated in real-time</p>
         </div>
-        <div style={{ border:'gray 2px solid' }}  className='bg-black-500 fixed left-0 top-0 flex w-full justify-center items-center border-b border-gray-300 from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"'>
+        <div className='popUpSuccess'>
+        <div style={{ border:'gray 2px solid' }}  className='transactionSuccessful bg-black-500 fixed left-0 top-0 flex w-full justify-center items-center border-b border-gray-300 from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"'>
         <Image src='/tick.png' alt='' width={60} height={60} priority/>
-          <div>
+          <div className=''>
               <p className='p-1 font-bold text-sm'>
                   Transaction successful
               </p>
@@ -161,7 +186,9 @@ export default function Home() {
             </div>    
         </div>
 
-        <div  style={{ border:'gray 2px solid' }} className="bg-black-500 fixed left-0 top-0 flex w-full justify-center items-center border-b border-gray-300 from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+        </div>
+
+        <div  style={{ border:'gray 2px solid' }} className=" hidden bg-black-500 fixed left-0 top-0 flex w-full justify-center items-center border-b border-gray-300 from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
         <Image src='/cancel.png' alt='' width={60} height={60} priority/>
           <div>
               <p className='p-1 font-bold text-sm'>
@@ -253,7 +280,7 @@ export default function Home() {
                   <p className='font-bold'>{position.pooled_token}%</p>
                 </td>
                 <td>
-                  <p className="text-red font-bold">{position.h_change}%</p>
+                  <p className={`text-red font-bold ${position.h_change > 0 ? 'text-green' : 'text-red'}`}>{position.h_change}%</p>
                 </td>
                 <td>
                 <div className='flex items-center space-x-1'>
@@ -265,7 +292,10 @@ export default function Home() {
                   <p className={`${position.status === 'waiting' ? 'text-yellow' : 'text-green'} font-bold`}>{position.status}</p>
                 </td>
                 <td>
-                  <button style={{ width:'8vw' }} className="font-bold m-1flex text-sm rounded-lg bg-gray p-2  m-1" onclick={popUp}>Quick buy</button>
+                <Image src='/watch.png' alt='' width={12} height={12} priority/>
+                </td>
+                <td>
+                  <button style={{ width:'8vw' }} className="font-bold m-1flex text-sm rounded-lg bg-gray p-2  m-1" onClick={popUpToast}>Quick buy</button>
                 </td>
                 <td  className='p-2'>
                   <p className="text-sm font-bold rounded-lg bg-gray p-2">Cancel</p>

@@ -20,7 +20,20 @@ body {
   background: linear-gradient(90deg, #11021b, #000000);
 
 }
-
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #11021b;
+}
+::-webkit-scrollbar-track {
+  background-color:  #22152b;
+  padding: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #220535;
+}
 *{
   font-weight: 16;
 }
@@ -40,6 +53,58 @@ body {
 }
 .popup.active .overlay{
   display: flex;
+}
+
+.popuptoast .overlaytoast{
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 0, 0,0.7);
+  z-index: 1;
+  display: none;
+  transition: all 0.5s;
+
+}
+.popuptoast.active .overlaytoast{
+  display: flex;
+}
+
+.transactionSuccessful{
+  position: fixed;
+  user-select: none;
+  display: none;
+  transition: all .5s;
+  top: -5;
+  animation: both 10s floatIn;
+}
+
+@keyframes floatIn {
+  0%{
+    transform: scale(0.5);
+    opacity: 0;
+  }25%{
+    transform: scale(1);
+    opacity: 1;
+  }50%{
+    transform: scale(1);
+    opacity: 1;
+  }75%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  100%{
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.popUpSuccess.active .transactionSuccessful{
+  display: flex;
+  background: rgba(59, 59, 59, 0.349);
 }
 @layer utilities {
   .text-balance {
