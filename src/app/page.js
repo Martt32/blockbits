@@ -103,7 +103,7 @@ const popUpSuccess = async ()=>{
                 Accept Terms and Conditions
               </p>
                 <p className='text-grandson font-bold p-2 text-sm'>
-                  To proceed, please accept our <span className='text-teal-600 font-bold'>Terms and Conditions</span>
+                  To proceed, please accept our <span className='text-green font-bold'>Terms and Conditions</span>
               </p>
               <label className='bg-transparent font-bold space-x-2 text-grandson text-sm px-2 flex'>
                 <input className='bg-green' type='checkbox' true/>
@@ -112,7 +112,7 @@ const popUpSuccess = async ()=>{
                 </p>
               </label>
               <div className='p-2 font-bold'>
-                <button className="text-sm p-2 bg-teal-500 rounded-lg w-auto" onClick={popUpSuccess}>Accept</button>
+                <button style={{ borderRadius:'5px' }} className="text-sm p-3 bg-green w-auto" onClick={popUpSuccess}>Accept</button>
               </div>
               </div>
               </div>
@@ -150,20 +150,21 @@ const popUpSuccess = async ()=>{
       </div>
 
       <div className="flex justify-center items-center">
-        <div style={{ background: 'linear-gradient(85deg, #0039a6, #17b169)'}} className="cursor-pointer flex space-x-6 items-center w-auto h-1/2 p-2 rounded-lg">
+        {/* <div style={{ background: 'linear-gradient(85deg, #0039a6, #17b169)'}} className="cursor-pointer flex space-x-6 items-center w-auto h-1/2 p-2 rounded-lg">
         <div>
           <p className="text-sm font-bold " onClick={popUp}>Purchase premium</p>
         </div>  
         <Image src='/crown.png' alt='' width={25} height={25} priority/>
+        </div> */}
+        <Image src='/purchase.png' alt='' width={200} height={200} priority/>
+        <div style={{ border:'1px gray solid' }} className="flex font-bold  space-x-2 h-1/2 justify-center items-center m-2 p-1 px-2 rounded-full">
+          <p className='font-bold px-1'>786.9</p>
+          <Image src='/SOL.png' alt='' width={20} height={20} priority/>
         </div>
-        <div style={{ border:'2px gray solid' }} className="flex font-bold  space-x-2 h-1/2 justify-center items-center m-2 p-1 px-2 rounded-lg">
-          <p className='font-bold '>786.9</p>
-          <Image src='/SOL.png' alt='' width={25} height={25} priority/>
+        <div style={{ border:'1px gray solid' }} className="flex h-1/2 font-bold  justify-center items-center p-2 m-2 bg-gray rounded-full" >
+          <p className='font-bold px-6'>64ec2c...c898</p>
         </div>
-        <div style={{ border:'2px gray solid' }} className="flex h-1/2 font-bold  justify-center items-center p-2 m-2 bg-gray rounded-full" >
-          <p className='font-bold '>64ec2c...c898</p>
-        </div>
-        <Image src='/SOL.png' alt='' width={40} height={40} priority/>
+        <Image src='/profile.png' alt='' width={40} height={40} priority/>
       </div>
       </div>
 
@@ -188,7 +189,7 @@ const popUpSuccess = async ()=>{
 
         </div>
 
-        <div  style={{ border:'gray 2px solid' }} className=" hidden bg-black-500 fixed left-0 top-0 flex w-full justify-center items-center border-b border-gray-300 from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+        <div  style={{ border:'gray 1px solid' }} className=" hidden bg-black-500 fixed left-0 top-0 flex w-full justify-center items-center border-b border-gray-300 from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
         <Image src='/cancel.png' alt='' width={60} height={60} priority/>
           <div>
               <p className='p-1 font-bold text-sm'>
@@ -204,16 +205,11 @@ const popUpSuccess = async ()=>{
 
 
 
-        <div className="p-2">
+        <div className="p-2 flex justify-between">
 
-        <select style={{ border:'2px gray solid' }} className="bg-transparent w-auto rounded-full p-1 cursor-pointer">
-          <option value='filter ' >
-            <p className='font-bold'>
-              filter
-            </p>
-            </option>
-          
-        </select>
+        <Image src='/filter.png' alt='' width={100} height={100} priority/>
+
+        <Image src='/settings.png' alt='' width={100} height={100} priority/>
         </div>
         <div>
           {
@@ -221,7 +217,7 @@ const popUpSuccess = async ()=>{
           }
           <table className="bg-black p-4">
             <thead className='text-grandson text-sm'>
-              <th style={{ width:'10vw' }} className='font-bold p-4 text-sm text-start py-4'>
+              <th style={{ width:'12vw' }} className='font-bold p-4 text-sm text-start py-4'>
                 pair
               </th>
               <th style={{ width:'10vw' }} className='font-bold text-start py-4'>
@@ -252,14 +248,14 @@ const popUpSuccess = async ()=>{
                 <td  className='p-2'>
                   <div className='flex items-center space-x-2'>
 
-                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
+                  <Image src={`/${position.pair}.png`} alt='' width={25} height={25} priority/>
                   <p className='font-bold'>{position.pair}</p>
                   </div>
                 </td>
                 <td>
                   <p className='font-bold'>{position.created}</p>
                 </td>
-                <td className='flex items-center space-x-2 py-6'>
+                <td className='flex items-center space-x-1 py-6'>
                   <div className='flex items-center space-x-1'>
                   <p className='font-bold'>Fad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
                   </div>
@@ -271,7 +267,7 @@ const popUpSuccess = async ()=>{
                   </div>
                 </td>
                 <td>
-                <div className='flex space-x-2 items-center'>
+                <div className='flex p-2 space-x-2 items-center'>
                   <Image src='/SOL.png' alt='' width={20} height={20} priority/>
                   <p className='font-bold'>{position.pooled_sol}</p> 
                 </div>
@@ -291,14 +287,14 @@ const popUpSuccess = async ()=>{
                 <td>
                   <p className={`${position.status === 'waiting' ? 'text-yellow' : 'text-green'} font-bold`}>{position.status}</p>
                 </td>
-                <td>
-                <Image src='/watch.png' alt='' width={12} height={12} priority/>
+                <td className='text-white p-4'>
+                <Image className='text-white' src='/watch.png' alt='' width={20} height={20} priority/>
                 </td>
                 <td>
-                  <button style={{ width:'8vw' }} className="font-bold m-1flex text-sm rounded-lg bg-gray p-2  m-1" onClick={popUpToast}>Quick buy</button>
+                  <button style={{ width:'8vw' }} className="font-bold m-1flex text-sm rounded-full bg-gray p-2 px-3 m-1" onClick={popUpToast}>Quick buy</button>
                 </td>
                 <td  className='p-2'>
-                  <p className="text-sm font-bold rounded-lg bg-gray p-2">Cancel</p>
+                  <p className="text-sm font-bold rounded-full bg-gray p-2 px-3">Cancel</p>
                 </td>
               </tr>
               ))}

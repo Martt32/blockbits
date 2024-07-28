@@ -92,21 +92,22 @@ export default function Home() {
 </div>
 
 <div className="flex justify-center items-center">
-  <div style={{ background: 'linear-gradient(85deg, #0039a6, #17b169)'}} className="cursor-pointer font-bold flex space-x-6 items-center w-auto h-1/2 p-2 rounded-lg">
-  <div>
-    <p className="text-sm font-bold" >Purchase premium</p>
-  </div>  
-  <Image src='/crown.png' alt='' width={25} height={25} priority/>
-  </div>
-  <div style={{ border:'2px gray solid' }} className="flex font-bold space-x-2 h-1/2 justify-center items-center m-2 p-1 px-2 rounded-lg">
-    <p className='font-bold'>786.9</p>
-    <Image src='/SOL.png' alt='' width={25} height={25} priority/>
-  </div>
-  <div style={{ border:'2px gray solid' }} className="flex font-bold h-1/2 justify-center items-center p-2 m-2 bg-gray rounded-full" >
-    <p className='font-bold'>64ec2c...c898</p>
-  </div>
-  <Image style={{ borderRadius:'50%' }} src='/SOL.png' alt='' width={40} height={40} priority/>
-</div>
+        {/* <div style={{ background: 'linear-gradient(85deg, #0039a6, #17b169)'}} className="cursor-pointer flex space-x-6 items-center w-auto h-1/2 p-2 rounded-lg">
+        <div>
+          <p className="text-sm font-bold " onClick={popUp}>Purchase premium</p>
+        </div>  
+        <Image src='/crown.png' alt='' width={25} height={25} priority/>
+        </div> */}
+        <Image src='/purchase.png' alt='' width={200} height={200} priority/>
+        <div style={{ border:'1px gray solid' }} className="flex font-bold  space-x-2 h-1/2 justify-center items-center m-2 p-1 px-2 rounded-full">
+          <p className='font-bold px-1'>786.9</p>
+          <Image src='/SOL.png' alt='' width={20} height={20} priority/>
+        </div>
+        <div style={{ border:'1px gray solid' }} className="flex h-1/2 font-bold  justify-center items-center p-2 m-2 bg-gray rounded-full" >
+          <p className='font-bold px-6'>64ec2c...c898</p>
+        </div>
+        <Image src='/profile.png' alt='' width={40} height={40} priority/>
+      </div>
 </div>
 
       <div className="relative flex flex-col  before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full  before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
@@ -116,10 +117,7 @@ export default function Home() {
         </div>
         <div className="p-2 flex justify-between">
 
-        <select style={{ border:'2px gray solid' }} className="bg-transparent w-auto rounded-full p-1 cursor-pointer">
-          <option value='filter '>filter</option>
-          
-        </select>
+        <Image src='/filter.png' alt='' width={100} height={100} priority/>
         <p className='text-grandson font-bold'>Closed Positions PNL:177 SOL</p>
         </div>
         <div>
@@ -184,7 +182,7 @@ export default function Home() {
                 <td className='text-white p-4'>
                 <Image className='text-white' src='/watch.png' alt='' width={20} height={20} priority/>
                 </td>
-                <td>
+                <td className=' p-4'>
                 <Image className='text-white' src='/hide.png' alt='' width={20} height={20} priority/>
                 </td>
               </tr>))}
