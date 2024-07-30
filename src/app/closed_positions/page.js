@@ -126,13 +126,13 @@ export default function Home() {
           }
           <table className="bg-black p-4">
             <thead className='text-grandson text-sm'>
-              <th style={{ width:'10vw' }} className='p-4 text-sm text-start py-4'>
+              <th style={{ width:'10vw' }} className='p-4 font-bold text-start py-4'>
                 pair
               </th>
               <th style={{ width:'10vw' }} className='text-start font-bold py-4'>
                 created
               </th>
-              <th style={{ width:'20vw' }} className='w-auto text-start font-bold text-sm py-4'>
+              <th style={{ width:'10vw' }} className='w-auto text-start font-bold text-sm py-4'>
                 invested
               </th>
               <th style={{ width:'10vw' }} className='text-start font-bold py-4'>
@@ -151,7 +151,7 @@ export default function Home() {
                 <td  className='p-2'>
                   <div className='flex space-x-2'>
 
-                  <Image src='/SOL.png' alt='' width={25} height={25} priority/>
+                  <Image src={`/${position.pair}.png`} alt='' width={25} height={25} priority/>
                   <p className='font-bold'>{position.pair}</p>
                   </div>
                 </td>
@@ -159,13 +159,13 @@ export default function Home() {
                   <p className='font-bold'>{position.created}</p>
                 </td>
                 <td className='flex items-center space-x-2 py-6'>
-                <div className='flex items-center'>
-                  <Image src='/SOL.png' alt='' width={20} height={20} priority/>
+                <div className='flex space-x-2 items-center'>
+                  <Image  src='/SOL.png' alt='' width={20} height={20} priority/>
                   <p className='font-bold'>{position.invested}</p> 
                 </div>
                 </td>
                 <td>
-                <div className='flex font-bold items-center'>
+                <div className='flex space-x-2 font-bold p-2 items-center'>
                   <Image src='/SOL.png' alt='' width={20} height={20} priority/>
                   <p className='font-bold'>{position.current}</p> 
                 </div>
@@ -174,7 +174,7 @@ export default function Home() {
                   <p className=' font-bold'>{position.ROI}</p>
                 </td>
                 <td>
-                <div className={`flex items-center ${position.status === 'SP Selling' ? 'text-red' : 'text-green'}`}>
+                <div className={`flex p-2 space-x-2 items-center ${position.status === 'SP Selling' ? 'text-red' : 'text-green'}`}>
                   <Image src='/SOL.png' alt='' width={20} height={20} priority/>
                   <p className='font-bold'>{position.PNL}</p> 
                 </div>

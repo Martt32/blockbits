@@ -157,8 +157,8 @@ const popUpSuccess = async ()=>{
         <Image src='/crown.png' alt='' width={25} height={25} priority/>
         </div> */}
         <Image src='/purchase.png' alt='' width={200} height={200} priority/>
-        <div style={{ border:'1px gray solid' }} className="flex font-bold  space-x-2 h-1/2 justify-center items-center m-2 p-1 px-2 rounded-full">
-          <p className='font-bold px-1'>786.9</p>
+        <div style={{ border:'1px gray solid' }} className="flex font-bold  space-x-2 h-1/2 justify-center items-center m-2 p-1 px-4 rounded-full">
+          <p className='font-bold '>786.9</p>
           <Image src='/SOL.png' alt='' width={20} height={20} priority/>
         </div>
         <div style={{ border:'1px gray solid' }} className="flex h-1/2 font-bold  justify-center items-center p-2 m-2 bg-gray rounded-full" >
@@ -257,13 +257,13 @@ const popUpSuccess = async ()=>{
                 </td>
                 <td className='flex items-center space-x-1 py-6'>
                   <div className='flex items-center space-x-1'>
-                  <p className='font-bold'>Fad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
+                  <p style={{ fontSize:'12px' }} className='font-bold'>Fad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
                   </div>
                   <div className='flex items-center space-x-1'>
-                  <p className='font-bold'>Mad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
+                  <p style={{ fontSize:'12px' }} className='font-bold'>Mad</p> <Image src='/tick.png' alt='' width={12} height={12} priority/>
                   </div>
                   <div className='flex items-center space-x-1'>
-                  <p className='font-bold'>top 10 holders</p><Image src='/tick.png' alt='' width={12} height={12} priority/>
+                  <p style={{ fontSize:'12px' }} className='font-bold'>top 10 holders</p><Image src='/tick.png' alt='' width={12} height={12} priority/>
                   </div>
                 </td>
                 <td>
